@@ -1,186 +1,168 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Baljinder Hothi</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
-<style>
-body, html {
-  height: 100%;
-  font-family: "Inconsolata", sans-serif;
-}
-
-.bgimg {
-  background-position: center;
-  background-size: cover;
-  background-image: url("image2.jpg");
-  min-height: 75%;
-}
-
-.menu {
-  display: none;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baljinder Hothi - Personal Website</title>
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+    font-family Baskerville, serif
+    </style>
 </head>
-<body>
-
-<!-- Links (sit on top) -->
-<div class="w3-top">
-  <div class="w3-row w3-padding w3-black">
-    <div class="w3-col s3">
-      <a href="#" class="w3-button w3-block w3-black">HOME</a>
-    </div>
-    <div class="w3-col s3">
-      <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
-    </div>
-    <div class="w3-col s3">
-      <a href="#menu" class="w3-button w3-block w3-black">Projects</a>
-    </div>
-    <div class="w3-col s3">
-      <a href="#where" class="w3-button w3-block w3-black">Education</a>
-    </div>
-  </div>
-</div>
-
-<!-- Header with image -->
-<header class="bgimg w3-display-container w3-grayscale-min" id="home">
-  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
-    <span class="w3-tag">Aspiring Computer Science Student</span>
-  </div>
-  <div class="w3-display-middle w3-center">
-    <span class="w3-text-white" style="font-size:90px">Baljinder<br>Hothi</span>
-  </div>
-  <div class="w3-display-bottomright w3-center w3-padding-large">
-    <span class="w3-text-white">The City College Of New York</span>
-  </div>
-</header>
-
-<!-- Add a background color and large text to the whole page -->
-<div class="w3-sand w3-grayscale w3-large">
-
-<!-- About Container -->
-<div class="w3-container" id="about">
-  <div class="w3-content" style="max-width:700px">
-    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT </span></h5>
-    <p>I was born in India and came to the US at an early age. I am a first generation College student and I will be the first in my direct family to graduate from College!</p>
-    <p>I thoroughly enjoy working on Data Science and Machine Learning projects, but I am open and do also enjoy Front end work as well!</p>
-    <div class="w3-panel w3-leftbar w3-light-grey">
-      <p><i>"No man ever steps in the same river twice, for it is not the same river, and he is not the same man."</i></p>
-      <p>A famous mistranslation of Heraclitus's Quoute</p>
-    </div>
-  </div>
-</div>
-
-<!-- Menu Container -->
-<div class="w3-container" id="menu">
-  <div class="w3-content" style="max-width:700px">
- 
-    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Projects</span></h5>
-  
-    <div class="w3-row w3-center w3-card w3-padding">
-        <a href="javascript:void(0)" onclick="openMenu(event, 'Movie Rating Project');" id="myLink">
-        <div class="w3-col s6 tablink">Movie Rating Project</div>
-      </a>
-      <a href="javascript:void(0)" onclick="openMenu(event, 'PicSymphony');" id="myLink">
-        <div class="w3-col s6 tablink">PicSymphony</div>
-      </a>
-      <a href="javascript:void(0)" onclick="openMenu(event, 'Spotify Clone');">
-        <div class="w3-col s6 tablink">Spotify Clone</div>
-      </a>
-      <a href="javascript:void(0)" onclick="openMenu(event, 'URL Shortener');">
-        <div class="w3-col s6 tablink">URL Shortener</div>
-      </a>
-    </div>
-
-    <div id="Movie Rating Project" class="w3-container menu w3-padding-48 w3-card">
-      <h5>What's It about?</h5>
-      <p class="w3-text-grey">Collaborated with a partner on a data refinement  and visualization project using Python, NuMPI, and Pandas
-          Analyzed and processed over 1 million data entries  from two directories.
-          Cleaned and sorted the data to facilitate analysis, gained proficiency in data cleaning, manipulation, and visualization. 
-           Identified top genres and films per genre based on number of reviews and overall ratings.   
-            Presented Insightful findings regarding trends in user preferences over decades.</p><br>
-    
-      <h5>The GitHub Repo</h5>
-      <p class="w3-text-grey"><a href="https://github.com/BaljinderHothi/CSC-11300-Movie-Ratings-Analysis---Python">  Data Analysis Project</a></p><br>
-    
-      <div id="PicSymphony" class="w3-container menu w3-padding-48 w3-card">
-        <h5>What's It about?</h5>
-        <p class="w3-text-grey">Created a website project for the CTP 9th cohort hackathon with a team of four members, where we honed our skills in
-            CSS, HTML, JavaScript, Node.js and ExpressJs, jQuery, Socket.io, and MongoDB while learning how to work efficiently as
-            a team. Developing the project exposed us to a variety of new technologies and languages, diversifying our skill sets and making
-            us more adaptable developers. Through this hackathon project, we gained practical experience by building a web application, reinforcing our passion for
-            web development as well as working on the back end and its impact.</p><br>
-      
-        <h5>The GitHub Repo</h5>
-        <p class="w3-text-grey"><a href="https://github.com/BaljinderHothi/CTP-Hackathon"> PicSymphony</a></p><br>
-
-        <h5>Project Presentation</h5>
-        <p class="w3-text-grey"><a href="https://www.canva.com/design/DAFskGzUkiI/zC1YwyCGsyfJRj39-qMAHw/edit?utm_content=DAFskGzUkiI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">  Canva</a></p><br>
-
-    <div id="Sptoify Clone" class="w3-container menu w3-padding-48 w3-card">
-      <h5>What's It about?</h5>
-      <p class="w3-text-grey">Demonstrated exceptional problem-solving skills and a deep understanding of front-end and back-end technologies,
-        resulting in the creation of a fully functional and captivating music streaming platform. 
-        Collaborated with peers to cultivate teamwork skills and gain exposure to a simulated company environment.
-         Implemented a way to fetch data in the server by directly accessing the database without an API.
-        </p><br>
-    
-      <h5>The Github Repo</h5>
-      <p class="w3-text-grey">The Repo is currently private, will be added/made public once completed!</p><br>
-      <h5>Is It Finished?</h5>
-      <p class="w3-text-grey">No sadly it is not finished yet and is still being worked on!</p><br>
-    
-      <div id="URL Shortener" class="w3-container menu w3-padding-48 w3-card">
-        <h5>What's It about?</h5>
-        <p class="w3-text-grey">Developed a local URL shortener using Python, HTML, and CSS. Implemented a user-friendly web application allowing users to enter long URLs and receive shorter versions Designed an aesthetically pleasing interface with dynamic elements, showcasing proficiency in front-end development
-            and back-end Python logic.</p><br>
-      
-        <h5>The GitHub Repo</h5>
-        <p class="w3-text-grey"><a href=" https://github.com/BaljinderHothi/URL-Shortener-Code "> URL Shortener</a></p><br>
-
-
-    </div>  
-    <img src="IMG_Me.jpg" style="width:100%;max-width:1000px;margin-top:32px;">
-  </div>
-</div>
-
-<!-- Contact/Area Container -->
-<div class="w3-container" id="where" style="padding-bottom:32px;">
-  <div class="w3-content" style="max-width:700px">
-    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Education</span></h5>
-    <p>Undergraduate Student at the Grove School Of Engineering at The City College Of New York</p>
-    <img src="city-college.jpg" class="w3-image" style="width:100%">
-    <p><span class="w3-tag">FYI!</span> Pursuing a Bachelors in Computer Science</p>
-    <p>Currently Hold a 3.2 GPA</p>
-    <p>On track to graduate May 2025</p>
-    <p><strong>Classes Taken:</strong> Data Stuctures, Discrete Mathematics, and Algorithms</p>
-    <p><strong>Upcoming Classes:</strong> Machine Learning, and Artifical Intelligence</p>
+<style>
+    body {
+        background-image: url('whitebackground.jpg');
+        background-size: cover; 
+        background-repeat: no-repeat; 
+        background-attachment: fixed; 
+    }
+</style>
+    <header style="background-image: url('background.jpg');">
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+            </ul>
+        </nav>
+    </header>
     <br>
     <br>
-    <p><strong>Contact Me</strong> with any questions or concerns! </p>
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message " required name="Message"></p>
-      <p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
-    </form>
-    <a href="https://github.com/BaljinderHothi?tab=repositories" target="_blank">
-        <img src="GithubLogo.png" alt="GitHub Logo" width="60" height="60" style="margin-right: 20px;">
-    </a>
-    <a href="https://www.linkedin.com/in/baljinder-hothi/" target="_blank">
-        <img src="LinkedinLogo.png" alt="LinkedIn Logo" width="60" height="60" style="margin-right: 20px;">
-    </a>
-  </div>
-</div>
+    <section style="text-align: center; margin-bottom: 80px;">
+        <h2>For CUNY Tech Prep 2023 Summer Homework</h2>
+    </section>
+    
+    <br>
+    <br>
+    <section id="about" style="text-align: left; margin-bottom: 80px;">
+        <h2>    About Me</h2>
+        <br>
+        <br>
+        <div style="display: flex; align-items: center;">
+            <div style="flex: 1;">
+                <p style="margin-top: 20px;">
+                
+    
 
-<!-- End page content -->
-</div>
+                    <li>    Hi my name is Baljinder Hothi.</li>
+                    <li>    I was born in India!</li>
+                    <li>    I am a student at the City College Of New York (CUNY CCNY).</li>
+                    <li>    I am expecting to graduate 2025 with a Bachelors of Science in Computer Science and a minor in Business Administration!</li>
+                    <li>    I enjoy programming and specifically love working on data science and machine learning related projects!</li>
+                    <li>    I have a few of my current completed projects below and have more to come!</li>
+                    <li>    For hobbies I love reading manga and books, as well as taking pictures!</li>
+                    <li>    My favorite author is Osamu Dazai</li>
+                    <li>    My favorite place to take pictures is in the city</li>
+                </p>
+            </div>
+            <div style="flex: 1;">
+                <img src="me.jpg" alt="Baljinder Hothi" style="max-width: 150px;">
+                
+                    <img src="image1.jpg" alt="Image 1" style="max-width: 150px; margin-top: 10px;">
+                    <img src="image2.jpg" alt="Image 2" style="max-width: 150px; margin-top: 10px;">
+                    <img src="image3.jpg" alt="Image 3" style="max-width: 150px; margin-top: 10px;">
+                    <img src="books.jpg" alt="Image 3" style="max-width: 326px; margin-top: 10px;">
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Footer -->
-<!--Put the code for the clickable menus here-->
-<script>
+    <section id="projects">
+        <h1>Projects</h1>
+        <br>
+        <br>
+        <div class="project">
+            <h3><a href="https://github.com/BaljinderHothi/CSC-11300-Movie-Ratings-Analysis---Python">  Data Analysis Project</a></h3>
+            <br>
+            <p> <li>    Collaborated with a partner on a data refinement  and visualization project using Python, NuMPI, and Pandas</li>
+                <li>    Analyzed and processed over 1 million data entries  from two directories</li>
+                <li>    Cleaned and sorted the data to facilitate analysis, gained proficiency in data cleaning, manipulation, and visualization </li>
+                <li>    Identified top genres and films per genre based on number of reviews and overall ratings</li>
+                <li>    Presented Insightful findings regarding trends in user preferences over decades</li>
+                </p>
+        </div>
+        <br>
+        <br>
+        <div class="project">
+            <h3><a href="https://github.com/BaljinderHothi/URL-Shortener-Code">     URL Shortener Project</a></h3>
+            <br>
+            <p><li>     Developed a local URL shortener using Python, HTML, and CSS</li>
+               <li>     Implemented a user-friendly web application allowing users to enter long URLs and receive shorter versions</li>
+               <li>     Designed an aesthetically pleasing interface with dynamic elements, showcasing proficiency in front-end development and back-end Python logic.</li>
+                </p>
+        </div>
+        <br>
+        <br>
+        <div class="section-spacing"></div>
+    <section id="education">
+        <h2>    Education</h2>
+        <br>
+        <div class="education-entry">
+            <h3>    The City College Of New York(CUNY CCNY)</h3>
+            <p><li> Bachelors of Science in Computer Science</li>
+                <li>    Minor in Business Administration</li>
+                <li>    Expected Graduation Spring 2025</li>
+            </p>
+            <br>
+            <br>
+            <h2>    Classes Taken</h2>
+    <ul>
+        <li>    Data Structures</li>
+        <li>    Discrete Math</li>
+        <li>    Probability and Statistics for Computer Science</li>
+        <li>    Intro to Computing</li>
+        <li>    Python Programming Language</li>
+    </ul>
+    <br>
+    <br>
+    <br>
+    <h2>    Upcoming Classes</h2>
+    <ul>
+        <li>    Algorithms</li>
+        <li>    Machine Learning</li>
+        <li>    Software Design Lab</li>
+    </ul>
+        </div>
+       
+    </section>
+
+   <br>
+   <br>
+<section id="contact" style="text-align: center; margin-bottom: 80px;">
+    <h2>Contact Me</h2>
+    <br>
+    <div>
+        <a href="https://github.com/BaljinderHothi?tab=repositories" target="_blank">
+            <img src="GithubLogo.png" alt="GitHub Logo" width="60" height="60" style="margin-right: 20px;">
+        </a>
+        <a href="https://www.linkedin.com/in/baljinder-hothi/" target="_blank">
+            <img src="LinkedinLogo.png" alt="LinkedIn Logo" width="60" height="60" style="margin-right: 20px;">
+        </a>
+    </div>
+</section>
+
+        
+<br>
+<br>
+
+    <footer>
+        <p>&copy;   2023 Baljinder Hothi. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const navigationLinks = document.querySelectorAll('nav a');
+        navigationLinks.forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                const target = document.querySelector(link.getAttribute('href'));
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <script>
     document.addEventListener("DOMContentLoaded", function() {
         const githubLogo = document.getElementById("github-logo");
         const linkedinLogo = document.getElementById("linkedin-logo");
@@ -194,27 +176,5 @@ body, html {
         });
     });
     </script>
-
-<script>
-// Tabbed Menu
-function openMenu(evt, menuName) {
-  var i, x, tablinks;
-  x = document.getElementsByClassName("menu");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < x.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
-  }
-  document.getElementById(menuName).style.display = "block";
-  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
-}
-document.getElementById("myLink").click();
-
-// Use unique IDs for tablinks
-document.getElementById("myLink1").click(); // Click the initial tab
-</script>
-
 </body>
 </html>
