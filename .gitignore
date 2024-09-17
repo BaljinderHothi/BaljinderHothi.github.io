@@ -1,0 +1,4 @@
+.parcel-cache/
+dist/
+myenv/
+node_modules/

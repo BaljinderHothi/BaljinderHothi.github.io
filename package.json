@@ -1,8 +1,8 @@
 {
-  "name": "simplefolio",
+  "name": "baljinderhothi.github.io",
   "version": "1.0.1",
-  "private": "true",
-  "description": "A clean, beautiful and responsive portfolio template for Developers!",
+  "private": true,
+  "description": "Baljinder Hothi's personal portfolio website",
   "source": "src/index.html",
   "scripts": {
     "start": "parcel",
@@ -10,15 +10,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cobiwave/simplefolio"
+    "url": "git+https://github.com/BaljinderHothi/baljinderhothi.github.io.git"
   },
-  "keywords": [],
-  "author": "Jacobo Martinez",
+  "keywords": [
+    "portfolio",
+    "developer",
+    "personal-website"
+  ],
+  "author": "Baljinder Hothi",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cobiwave/simplefolio/issues"
+    "url": "https://github.com/BaljinderHothi/baljinderhothi.github.io/issues"
   },
-  "homepage": "https://github.com/cobiwave/simplefolio#readme",
+  "homepage": "https://BaljinderHothi.github.io",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.8.2",
     "parcel": "^2.8.2",
