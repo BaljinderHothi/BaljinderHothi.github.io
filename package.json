@@ -3,10 +3,10 @@
   "version": "1.0.1",
   "private": true,
   "description": "Baljinder Hothi's personal portfolio website",
-  "source": "index.html",  
+  "source": "src/index.html",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "start": "parcel",
+    "build": "parcel build"
   },
   "repository": {
     "type": "git",
