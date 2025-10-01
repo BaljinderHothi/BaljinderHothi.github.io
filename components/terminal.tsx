@@ -185,8 +185,7 @@ My goal is to conduct research in a mathematically rigorous way, focusing on:
 
 Email:    baljinderh[dot]@gmail[dot]com
 LinkedIn: linkedin.com/in/baljinder-hothi
-GitHub:   github.com/BaljinderHothi
-Phone:    347-459-3124`,
+GitHub:   github.com/BaljinderHothi`,
 
   skills: `Technical Skills
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
