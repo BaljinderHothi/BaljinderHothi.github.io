@@ -9,7 +9,7 @@ import "./globals.css"
 export const metadata: Metadata = {
   title: "Baljinder S. Hothi | Portfolio",
   description: "Software Engineer & Researcher focused on Machine Learning, Robotics, and Quantitative Finance",
-  generator: "v0.app",
+  generator: "@baljinderhothi",
 }
 
 export default function RootLayout({
