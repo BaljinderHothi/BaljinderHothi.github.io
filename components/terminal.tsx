@@ -183,7 +183,7 @@ My goal is to conduct research in a mathematically rigorous way, focusing on:
   contact: `Contact Information
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Email:    baljinderh[dot]@gmail[dot]com
+Email:    baljinderh[dot]cs@gmail[dot]com
 LinkedIn: linkedin.com/in/baljinder-hothi
 GitHub:   github.com/BaljinderHothi`,
 
