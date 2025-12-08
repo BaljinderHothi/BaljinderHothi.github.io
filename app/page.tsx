@@ -1,5 +1,6 @@
 import Link from "next/link"
-import { Github, Linkedin, Twitter } from "lucide-react"
+import { Github, Linkedin } from "lucide-react"
+import { ShiftingCharacters } from "@/components/shifting-characters"
 
 export default function Home() {
   return (
@@ -19,16 +20,14 @@ export default function Home() {
 
       {/* Content */}
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-6">
-        <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl text-slate-200 tracking-wide mb-4 text-center">Baljinder S. Hothi</h1>
-        <p className="text-slate-400 text-center max-w-2xl text-lg mb-8 leading-relaxed">
-          I'm a Software Engineer and Researcher focused on Machine Learning, Robotics, and Quantitative Finance. Currently working at Meta as a Production Engineering Fellow and conducting research at the RAIVN Lab (University of Washington).
-        </p>
+
+        {/* Animation */}
+        <div className="mb-24 min-h-[120px] flex items-center justify-center">
+          <ShiftingCharacters />
+        </div>
 
         {/* Navigation links */}
         <nav className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-12">
-          <Link href="/research" className="text-slate-400 hover:text-slate-200 transition-colors text-sm sm:text-base">
-            research
-          </Link>
           <Link
             href="/experience"
             className="text-slate-400 hover:text-slate-200 transition-colors text-sm sm:text-base"
@@ -38,32 +37,13 @@ export default function Home() {
           <Link href="/projects" className="text-slate-400 hover:text-slate-200 transition-colors text-sm sm:text-base">
             projects
           </Link>
-          <Link href="/hobbies" className="text-slate-400 hover:text-slate-200 transition-colors text-sm sm:text-base">
-            hobbies
-          </Link>
           <Link href="/blog" className="text-slate-400 hover:text-slate-200 transition-colors text-sm sm:text-base">
             blog
           </Link>
         </nav>
 
-        {/* Skills */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-12 w-full max-w-4xl text-center">
-          <div className="space-y-2">
-            <h3 className="text-slate-300 font-medium font-serif">Languages</h3>
-            <p className="text-slate-500 text-sm leading-relaxed">Python, JavaScript, Go, Haskell, SQL, C++, TypeScript, Java</p>
-          </div>
-          <div className="space-y-2">
-            <h3 className="text-slate-300 font-medium font-serif">Libraries & Tools</h3>
-            <p className="text-slate-500 text-sm leading-relaxed">PyTorch, scikit-learn, Spark, Snowflake, Git, Docker, GraphQL</p>
-          </div>
-          <div className="space-y-2">
-            <h3 className="text-slate-300 font-medium font-serif">Frameworks</h3>
-            <p className="text-slate-500 text-sm leading-relaxed">Next.js, React, Flask, FastAPI</p>
-          </div>
-        </div>
-
         {/* Social links */}
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-6 mb-24">
           <a
             href="https://linkedin.com/in/baljinder-hothi"
             target="_blank"
@@ -82,8 +62,21 @@ export default function Home() {
           >
             <Github className="w-5 h-5" />
           </a>
-
         </div>
+
+        {/* About Me */}
+        <div className="max-w-2xl text-center space-y-6">
+          <p className="text-slate-400 text-lg leading-relaxed">
+            Studying Computer Science at CCNY. Currently performing research as an intern at the University of Washington RAIVN Lab.
+          </p>
+          <p className="text-slate-400 text-lg leading-relaxed">
+            Interested in Robotic Learning, Generative Models, and Reinforcement Learning.
+          </p>
+          <p className="text-slate-500 text-base leading-relaxed italic">
+            I really like dogs (I have a Doberman mix) and I love learning to be a better person for our future.
+          </p>
+        </div>
+
       </div>
 
       {/* Footer credit */}

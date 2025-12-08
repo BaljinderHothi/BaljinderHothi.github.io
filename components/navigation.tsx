@@ -6,10 +6,8 @@ import Image from "next/image"
 import { cn } from "@/lib/utils"
 
 const navItems = [
-  { name: "research", href: "/research" },
   { name: "experience", href: "/experience" },
   { name: "projects", href: "/projects" },
-  { name: "hobbies", href: "/hobbies" },
   { name: "blog", href: "/blog" },
 ]
 

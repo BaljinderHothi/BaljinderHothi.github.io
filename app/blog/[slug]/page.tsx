@@ -35,7 +35,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           </header>
 
           {/* Content with LaTeX support */}
-          <BlogContent content={post.content} />
+          {/* Content with LaTeX support */}
+          <BlogContent content={post.content} images={post.images} checklist={post.checklist} />
 
           {/* Sources */}
           {post.sources && post.sources.length > 0 && (

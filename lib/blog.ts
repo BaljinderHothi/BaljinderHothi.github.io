@@ -2,61 +2,76 @@ export interface BlogPost {
   slug: string
   title: string
   date: string
-  author: string // "Baljinder Hothi" or "Baljinder Hothi & Someone Else"
-  content: string // Supports LaTeX with $$ delimiters
+  author: string
+  content: string
+  images?: { src: string; alt: string }[]
+  checklist?: { item: string; checked: boolean }[]
   sources?: { title: string; url: string }[]
 }
 
-export const blogPosts: BlogPost[] = [
+const posts: BlogPost[] = [
   {
-    slug: "aws-mcp-server",
-    title: "Building an MCP Server at AWS Lambda",
-    date: "August 2025",
+    slug: "photography",
+    title: "Photography",
+    date: "2024",
     author: "Baljinder Hothi",
-    content: `
-When I joined AWS Lambda as an intern, I didn't expect to be tackling one of the most interesting problems in LLM reliability: hallucination in Model Context Protocol (MCP) interactions.
-
-## The Problem
-
-Our initial research revealed a concerning pattern: LLMs interacting with MCP tools had only a **7% success rate** when left unconstrained. Even worse, some failures carried ethical risks—the models would confidently execute incorrect operations.
-
-The root cause? LLMs are fundamentally probabilistic. When given free reign over tool execution, they often:
-
-- Chain tools in nonsensical orders
-- Hallucinate parameters that don't exist
-- Skip required validation steps
-
-## The Solution: Constrained Execution
-
-We designed a tool chaining framework with three key components:
-
-1. **Execution Guardrails** - Hard constraints on which tools can follow which
-2. **Parameter Validation** - Schema enforcement before any tool invocation
-3. **State Tracking** - Maintaining context across multi-step operations
-
-The result? **100% reliability** on valid inputs.
-
-## Technical Implementation
-
-The MCP server itself handles CRUDL operations linking Kafka message queues to Lambda functions. What used to take engineers hours of manual configuration now takes **10 seconds**.
-
-$$\\text{Time Saved} = \\frac{\\text{Manual Time} - \\text{Automated Time}}{\\text{Manual Time}} \\approx 99.7\\%$$
-
-## Impact
-
-The framework was adopted by multiple internal teams and is now deployed to **16,000+ customers**. It's been open-sourced and continues to evolve.
-    `,
-    sources: [
-      { title: "Model Context Protocol Spec", url: "https://modelcontextprotocol.io" },
-      { title: "AWS Lambda Documentation", url: "https://docs.aws.amazon.com/lambda" },
-    ],
+    content: "A collection of moments captured from my travels and daily life. I enjoy shooting landscapes and urban environments.",
+    images: [
+      { src: "/images/jellyfish.jpg", alt: "Jellyfish" },
+      { src: "/images/seattle-aquarium-1.jpg", alt: "Seattle Aquarium Fish" },
+      { src: "/images/seattle-aquarium-2.jpg", alt: "Seattle Aquarium Tank" },
+      { src: "/images/seattle-aquarium-3.jpg", alt: "Seattle Aquarium Diver" },
+      { src: "/images/seattle-coastline.jpg", alt: "Seattle Coastline" },
+    ]
+  },
+  {
+    slug: "museums",
+    title: "Museums",
+    date: "2024",
+    author: "Baljinder Hothi",
+    content: "My checklist of museums to visit in NYC and Seattle.",
+    checklist: [
+      // NYC Museums
+      { item: "The Metropolitan Museum of Art (The Met)", checked: true },
+      { item: "Museum of Modern Art (MoMA)", checked: true },
+      { item: "American Museum of Natural History", checked: true },
+      { item: "Solomon R. Guggenheim Museum", checked: false },
+      { item: "Whitney Museum of American Art", checked: false },
+      { item: "Brooklyn Museum", checked: false },
+      { item: "The Morgan Library & Museum", checked: false },
+      // Seattle Museums
+      { item: "Museum of Pop Culture (MoPOP)", checked: true },
+      { item: "Seattle Art Museum (SAM)", checked: false },
+      { item: "Chihuly Garden and Glass", checked: true },
+    ]
+  },
+  {
+    slug: "hiking",
+    title: "Hiking",
+    date: "2024",
+    author: "Baljinder Hothi",
+    content: "Documenting my hikes and the beautiful trails I explore.",
+  },
+  {
+    slug: "cooking",
+    title: "Cooking",
+    date: "2024",
+    author: "Baljinder Hothi",
+    content: "Experiments in the kitchen. Trying out new recipes and techniques.",
+  },
+  {
+    slug: "reading",
+    title: "Reading",
+    date: "2024",
+    author: "Baljinder Hothi",
+    content: "Notes on books I've read and what I'm currently reading.",
   },
 ]
 
-export function getBlogPost(slug: string): BlogPost | undefined {
-  return blogPosts.find((post) => post.slug === slug)
+export function getAllBlogPosts(): BlogPost[] {
+  return posts
 }
 
-export function getAllBlogPosts(): BlogPost[] {
-  return blogPosts
+export function getBlogPost(slug: string): BlogPost | undefined {
+  return posts.find((post) => post.slug === slug)
 }
