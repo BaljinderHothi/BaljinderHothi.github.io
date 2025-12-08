@@ -6,9 +6,12 @@ export default function Home() {
     <main className="min-h-screen relative overflow-hidden bg-[#1a1d24]">
       {/* Tree background */}
       <div
-        className="fixed inset-0 z-0 opacity-40"
+        className="fixed inset-0 z-0 opacity-400"
         style={{
-          backgroundImage: "radial-gradient(circle at center, #2d3748 0%, #1a1d24 100%)",
+          backgroundImage: "url('/images/tree-bg.png'), radial-gradient(circle at center, #2d3748 0%, #1a1d24 100%)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
       />
       {/* Dark overlay for better text readability */}
