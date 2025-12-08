@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Github, Linkedin, Twitter } from "lucide-react"
 import { ShiftingCharacters } from "@/components/shifting-characters"
 import { Background } from "@/components/background"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 export default function Home() {
   return (
@@ -9,6 +10,10 @@ export default function Home() {
       <Background />
 
       {/* Content */}
+      <div className="absolute top-6 right-6 z-20">
+        <ThemeToggle />
+      </div>
+
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-6">
 
         <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl text-slate-200 tracking-wide mb-8 text-center">Baljinder S. Hothi</h1>

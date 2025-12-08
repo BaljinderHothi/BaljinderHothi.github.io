@@ -34,29 +34,29 @@ const projects = [
 
 export default function ProjectsPage() {
   return (
-    <main className="min-h-screen bg-[#1a1d24]">
+    <main className="min-h-screen bg-background transition-colors duration-700">
       <Navigation />
       <div className="pt-24 px-6 pb-16 max-w-4xl mx-auto">
-        <Link href="/" className="text-slate-500 hover:text-slate-300 transition-colors text-sm mb-8 inline-block">
+        <Link href="/" className="text-muted-foreground hover:text-foreground transition-colors text-sm mb-8 inline-block">
           ← back
         </Link>
-        <h1 className="font-serif text-4xl sm:text-5xl text-slate-200 mb-12">projects</h1>
+        <h1 className="font-serif text-4xl sm:text-5xl text-foreground mb-12">projects</h1>
 
         <div className="space-y-6">
           {projects.map((project) => (
             <article
               key={project.id}
-              className="bg-slate-800/40 backdrop-blur-sm rounded-lg p-6 border border-slate-700/50"
+              className="bg-card/50 backdrop-blur-sm rounded-lg p-6 border border-border hover:border-ring/50 transition-colors"
             >
-              <h2 className="font-serif text-xl text-slate-200 mb-3">{project.name}</h2>
+              <h2 className="font-serif text-xl text-card-foreground mb-3">{project.name}</h2>
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.tech.map((t) => (
-                  <span key={t} className="text-xs bg-slate-700/60 text-slate-400 px-2 py-1 rounded">
+                  <span key={t} className="text-xs bg-secondary text-secondary-foreground px-2 py-1 rounded">
                     {t}
                   </span>
                 ))}
               </div>
-              <p className="text-slate-400 text-sm leading-relaxed">{project.description}</p>
+              <p className="text-muted-foreground text-sm leading-relaxed">{project.description}</p>
             </article>
           ))}
         </div>
