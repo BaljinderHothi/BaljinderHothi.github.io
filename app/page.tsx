@@ -5,7 +5,12 @@ export default function Home() {
   return (
     <main className="min-h-screen relative overflow-hidden bg-[#1a1d24]">
       {/* Tree background */}
-      {/* Tree background - removed as image is missing */}
+      <div
+        className="fixed inset-0 z-0 opacity-40"
+        style={{
+          backgroundImage: "radial-gradient(circle at center, #2d3748 0%, #1a1d24 100%)",
+        }}
+      />
       {/* Dark overlay for better text readability */}
       <div className="fixed inset-0 z-0 bg-[#1a1d24]/50" />
 
