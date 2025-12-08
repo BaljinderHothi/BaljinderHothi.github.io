@@ -34,13 +34,13 @@ export default function Home() {
             href="/experience"
             className="text-slate-400 hover:text-slate-200 transition-colors text-sm sm:text-base"
           >
-            experience
+            Experience
           </Link>
           <Link href="/projects" className="text-slate-400 hover:text-slate-200 transition-colors text-sm sm:text-base">
-            projects
+            Projects
           </Link>
           <Link href="/blog" className="text-slate-400 hover:text-slate-200 transition-colors text-sm sm:text-base">
-            blog
+            Blog
           </Link>
         </nav>
 

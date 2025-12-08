@@ -6,9 +6,9 @@ import Image from "next/image"
 import { cn } from "@/lib/utils"
 
 const navItems = [
-  { name: "experience", href: "/experience" },
-  { name: "projects", href: "/projects" },
-  { name: "blog", href: "/blog" },
+  { name: "Experience", href: "/experience" },
+  { name: "Projects", href: "/projects" },
+  { name: "Blog", href: "/blog" },
 ]
 
 export function Navigation() {

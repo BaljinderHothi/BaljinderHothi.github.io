@@ -74,13 +74,13 @@ export const ShiftingCharacters = () => {
     }
 
     return (
-        <div className="max-w-3xl text-center font-mono text-base sm:text-lg md:text-xl text-slate-400 leading-relaxed break-words">
+        <div className="max-w-3xl text-center text-base sm:text-lg md:text-xl leading-relaxed break-words">
             {text.map((char, i) => (
                 <motion.span
                     key={i}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    className={lockedIndices.current.has(i) ? "text-slate-300" : "text-slate-600"}
+                    className={lockedIndices.current.has(i) ? "font-serif text-slate-300 italic" : "font-mono text-slate-600"}
                 >
                     {char}
                 </motion.span>
