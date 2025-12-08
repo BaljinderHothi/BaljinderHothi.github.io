@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Github, Linkedin } from "lucide-react"
+import { Github, Linkedin, Twitter } from "lucide-react"
 import { ShiftingCharacters } from "@/components/shifting-characters"
 
 export default function Home() {
@@ -47,7 +47,7 @@ export default function Home() {
         {/* Social links */}
         <div className="flex items-center gap-6">
           <a
-            href="https://linkedin.com/in/baljinder-hothi"
+            href="https://www.linkedin.com/in/baljinder-hothi/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-slate-500 hover:text-slate-300 transition-colors"
@@ -63,6 +63,15 @@ export default function Home() {
             aria-label="GitHub"
           >
             <Github className="w-5 h-5" />
+          </a>
+          <a
+            href="https://x.com/baljhothi"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-slate-500 hover:text-slate-300 transition-colors"
+            aria-label="X (Twitter)"
+          >
+            <Twitter className="w-5 h-5" />
           </a>
         </div>
 
