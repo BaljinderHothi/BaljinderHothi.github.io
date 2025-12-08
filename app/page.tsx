@@ -1,22 +1,12 @@
 import Link from "next/link"
 import { Github, Linkedin, Twitter } from "lucide-react"
 import { ShiftingCharacters } from "@/components/shifting-characters"
+import { Background } from "@/components/background"
 
 export default function Home() {
   return (
-    <main className="min-h-screen relative overflow-hidden bg-[#1a1d24]">
-      {/* Tree background */}
-      <div
-        className="fixed inset-0 z-0 opacity-400"
-        style={{
-          backgroundImage: "url('/images/tree-bg.png'), radial-gradient(circle at center, #2d3748 0%, #1a1d24 100%)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      />
-      {/* Dark overlay for better text readability */}
-      <div className="fixed inset-0 z-0 bg-[#1a1d24]/50" />
+    <main className="min-h-screen relative overflow-hidden bg-background transition-colors duration-700">
+      <Background />
 
       {/* Content */}
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-6">

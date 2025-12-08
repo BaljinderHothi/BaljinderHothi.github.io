@@ -4,6 +4,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
+import { ThemeToggle } from "./theme-toggle"
 
 const navItems = [
   { name: "Experience", href: "/experience" },
@@ -35,6 +36,9 @@ export function Navigation() {
                 </Link>
               </li>
             ))}
+            <li className="ml-2 pl-2 border-l border-slate-700/50">
+              <ThemeToggle />
+            </li>
           </ul>
         </div>
       </nav>

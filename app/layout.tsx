@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata, Viewport } from "next"
 import { Inter, Instrument_Serif } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
@@ -34,8 +35,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${instrumentSerif.variable} font-sans antialiased`}>
-        {children}
-        <Analytics />
+        <ThemeProvider
+          attribute="data-theme"
+          defaultTheme="dark"
+          enableSystem={false}
+          themes={["dark", "sun"]}
+          disableTransitionOnChange
+        >
+          {children}
+          <Analytics />
+        </ThemeProvider>
       </body>
     </html>
   )
