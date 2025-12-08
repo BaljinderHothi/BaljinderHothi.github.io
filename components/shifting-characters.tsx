@@ -7,75 +7,80 @@ const TARGET_TEXT = "Never assume what you're trying to prove, unless what you'r
 
 export const ShiftingCharacters = () => {
     const [text, setText] = useState(TARGET_TEXT.split("").map(() => CHARS[Math.floor(Math.random() * CHARS.length)]))
-    const [lockedIndices, setLockedIndices] = useState<number[]>([])
+    const lockedIndices = useRef<Set<number>>(new Set())
+    const [isMounted, setIsMounted] = useState(false)
 
     useEffect(() => {
+        setIsMounted(true)
         let interval: NodeJS.Timeout
-        let iterations = 0
+        let lockInterval: NodeJS.Timeout
 
-        const scramble = () => {
-            setText((prev) =>
-                prev.map((char, i) => {
-                    if (lockedIndices.includes(i)) return TARGET_TEXT[i]
+        // Start scrambling immediately
+        interval = setInterval(() => {
+            setText((currentText) =>
+                currentText.map((char, i) => {
+                    if (lockedIndices.current.has(i)) {
+                        return TARGET_TEXT[i]
+                    }
                     if (TARGET_TEXT[i] === " ") return " "
                     return CHARS[Math.floor(Math.random() * CHARS.length)]
                 })
             )
-            iterations++
-        }
-
-        interval = setInterval(scramble, 50)
+        }, 50)
 
         // Start locking characters after a delay
-        const timeout = setTimeout(() => {
-            const lockInterval = setInterval(() => {
-                setLockedIndices(prev => {
-                    if (prev.length >= TARGET_TEXT.length) {
-                        clearInterval(lockInterval)
-                        clearInterval(interval)
-                        return prev
-                    }
-                    // Lock multiple characters per frame to speed up long text
-                    const availableIndices = Array.from({ length: TARGET_TEXT.length }, (_, i) => i).filter(i => !prev.includes(i))
-                    if (availableIndices.length === 0) return prev
+        const startLockingTimeout = setTimeout(() => {
+            lockInterval = setInterval(() => {
+                const locked = lockedIndices.current
+                if (locked.size >= TARGET_TEXT.length) {
+                    clearInterval(lockInterval)
+                    clearInterval(interval)
+                    // Final fetch to ensure 100% correct
+                    setText(TARGET_TEXT.split(""))
+                    return
+                }
 
-                    const charsToLock = Math.min(3, availableIndices.length)
-                    const newIndices = []
-                    for (let k = 0; k < charsToLock; k++) {
-                        const idx = availableIndices[Math.floor(Math.random() * availableIndices.length)]
-                        newIndices.push(idx)
-                        // remove chosen index from temp available list to avoid dupes in this batch
-                        const removeIdx = availableIndices.indexOf(idx)
-                        if (removeIdx > -1) availableIndices.splice(removeIdx, 1)
+                // Find indices that are not yet locked
+                const availableIndices: number[] = []
+                for (let i = 0; i < TARGET_TEXT.length; i++) {
+                    if (!locked.has(i)) {
+                        availableIndices.push(i)
                     }
+                }
 
-                    return [...prev, ...newIndices]
-                })
+                // Lock a batch of characters (2-4 at a time to be faster)
+                const countToLock = Math.min(availableIndices.length, Math.floor(Math.random() * 3) + 2)
+
+                for (let k = 0; k < countToLock; k++) {
+                    const randomIndex = Math.floor(Math.random() * availableIndices.length)
+                    const idx = availableIndices[randomIndex]
+                    locked.add(idx)
+                    // Remove from temp array so we don't pick it again this tick
+                    availableIndices.splice(randomIndex, 1)
+                }
+
             }, 50)
-        }, 1500)
+        }, 1000)
 
         return () => {
             clearInterval(interval)
-            clearTimeout(timeout)
+            clearInterval(lockInterval)
+            clearTimeout(startLockingTimeout)
         }
     }, [])
 
-    // Force update effect to ensure locked characters visually update to target
-    useEffect(() => {
-        setText(prev => prev.map((char, i) => lockedIndices.includes(i) ? TARGET_TEXT[i] : char))
-    }, [lockedIndices])
-
+    if (!isMounted) {
+        return <div className="min-h-[60px]" /> // Prevent hydration mismatch flicker
+    }
 
     return (
-        <div className="flex flex-wrap justify-center max-w-2xl text-center font-mono text-base sm:text-lg md:text-xl text-slate-400 leading-relaxed">
+        <div className="max-w-3xl text-center font-mono text-base sm:text-lg md:text-xl text-slate-400 leading-relaxed break-words">
             {text.map((char, i) => (
                 <motion.span
                     key={i}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ duration: 0.1 }}
-                    className={lockedIndices.includes(i) ? "text-slate-300" : "text-slate-600"}
-                    style={{ whiteSpace: "pre" }} // Preserve spaces
+                    className={lockedIndices.current.has(i) ? "text-slate-300" : "text-slate-600"}
                 >
                     {char}
                 </motion.span>
