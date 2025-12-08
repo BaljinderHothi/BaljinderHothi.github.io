@@ -2,8 +2,8 @@
 import { useEffect, useState, useRef } from "react"
 import { motion } from "framer-motion"
 
-const CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*"
-const TARGET_TEXT = "STRIVING TO IMPROVE"
+const CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*"
+const TARGET_TEXT = "Never assume what you're trying to prove, unless what you're trying to prove is that you're an idiot."
 
 export const ShiftingCharacters = () => {
     const [text, setText] = useState(TARGET_TEXT.split("").map(() => CHARS[Math.floor(Math.random() * CHARS.length)]))
@@ -35,21 +35,30 @@ export const ShiftingCharacters = () => {
                         clearInterval(interval)
                         return prev
                     }
+                    // Lock multiple characters per frame to speed up long text
                     const availableIndices = Array.from({ length: TARGET_TEXT.length }, (_, i) => i).filter(i => !prev.includes(i))
                     if (availableIndices.length === 0) return prev
 
-                    // Lock one random available index
-                    const nextIndex = availableIndices[Math.floor(Math.random() * availableIndices.length)]
-                    return [...prev, nextIndex]
+                    const charsToLock = Math.min(3, availableIndices.length)
+                    const newIndices = []
+                    for (let k = 0; k < charsToLock; k++) {
+                        const idx = availableIndices[Math.floor(Math.random() * availableIndices.length)]
+                        newIndices.push(idx)
+                        // remove chosen index from temp available list to avoid dupes in this batch
+                        const removeIdx = availableIndices.indexOf(idx)
+                        if (removeIdx > -1) availableIndices.splice(removeIdx, 1)
+                    }
+
+                    return [...prev, ...newIndices]
                 })
-            }, 100)
-        }, 2000)
+            }, 50)
+        }, 1500)
 
         return () => {
             clearInterval(interval)
             clearTimeout(timeout)
         }
-    }, []) // Empty dependency array to run only once on mount
+    }, [])
 
     // Force update effect to ensure locked characters visually update to target
     useEffect(() => {
@@ -58,14 +67,15 @@ export const ShiftingCharacters = () => {
 
 
     return (
-        <div className="flex font-mono text-4xl sm:text-6xl md:text-8xl font-bold tracking-widest text-slate-200">
+        <div className="flex flex-wrap justify-center max-w-2xl text-center font-mono text-base sm:text-lg md:text-xl text-slate-400 leading-relaxed">
             {text.map((char, i) => (
                 <motion.span
                     key={i}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.1 }}
-                    className={lockedIndices.includes(i) ? "text-terminal-green" : "text-slate-500"}
+                    className={lockedIndices.includes(i) ? "text-slate-300" : "text-slate-600"}
+                    style={{ whiteSpace: "pre" }} // Preserve spaces
                 >
                     {char}
                 </motion.span>

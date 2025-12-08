@@ -11,9 +11,16 @@ export interface BlogPost {
 
 const posts: BlogPost[] = [
   {
+    slug: "about-me",
+    title: "About Me",
+    date: "Dec 7th 2025",
+    author: "Baljinder Hothi",
+    content: "Studying Computer Science at CCNY. Currently performing research as an intern at the University of Washington RAIVN Lab.\n\nInterested in Robotic Learning, Generative Models, and Reinforcement Learning.\n\nI really like dogs (I have a Doberman mix) and I love learning to be a better person for our future.",
+  },
+  {
     slug: "photography",
     title: "Photography",
-    date: "2024",
+    date: "Dec 7th 2025",
     author: "Baljinder Hothi",
     content: "A collection of moments captured from my travels and daily life. I enjoy shooting landscapes and urban environments.",
     images: [
@@ -27,7 +34,7 @@ const posts: BlogPost[] = [
   {
     slug: "museums",
     title: "Museums",
-    date: "2024",
+    date: "Dec 7th 2025",
     author: "Baljinder Hothi",
     content: "My checklist of museums to visit in NYC and Seattle.",
     checklist: [
@@ -48,21 +55,21 @@ const posts: BlogPost[] = [
   {
     slug: "hiking",
     title: "Hiking",
-    date: "2024",
+    date: "Dec 7th 2025",
     author: "Baljinder Hothi",
     content: "Documenting my hikes and the beautiful trails I explore.",
   },
   {
     slug: "cooking",
     title: "Cooking",
-    date: "2024",
+    date: "Dec 7th 2025",
     author: "Baljinder Hothi",
     content: "Experiments in the kitchen. Trying out new recipes and techniques.",
   },
   {
     slug: "reading",
     title: "Reading",
-    date: "2024",
+    date: "Dec 7th 2025",
     author: "Baljinder Hothi",
     content: "Notes on books I've read and what I'm currently reading.",
   },

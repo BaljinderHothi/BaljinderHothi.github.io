@@ -21,8 +21,10 @@ export default function Home() {
       {/* Content */}
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-6">
 
+        <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl text-slate-200 tracking-wide mb-8 text-center">Baljinder S. Hothi</h1>
+
         {/* Animation */}
-        <div className="mb-24 min-h-[120px] flex items-center justify-center">
+        <div className="mb-12 flex items-center justify-center px-4">
           <ShiftingCharacters />
         </div>
 
@@ -43,7 +45,7 @@ export default function Home() {
         </nav>
 
         {/* Social links */}
-        <div className="flex items-center gap-6 mb-24">
+        <div className="flex items-center gap-6">
           <a
             href="https://linkedin.com/in/baljinder-hothi"
             target="_blank"
@@ -62,19 +64,6 @@ export default function Home() {
           >
             <Github className="w-5 h-5" />
           </a>
-        </div>
-
-        {/* About Me */}
-        <div className="max-w-2xl text-center space-y-6">
-          <p className="text-slate-400 text-lg leading-relaxed">
-            Studying Computer Science at CCNY. Currently performing research as an intern at the University of Washington RAIVN Lab.
-          </p>
-          <p className="text-slate-400 text-lg leading-relaxed">
-            Interested in Robotic Learning, Generative Models, and Reinforcement Learning.
-          </p>
-          <p className="text-slate-500 text-base leading-relaxed italic">
-            I really like dogs (I have a Doberman mix) and I love learning to be a better person for our future.
-          </p>
         </div>
 
       </div>
