@@ -1,0 +1,172 @@
+/* Base styles */
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body {
+    background-color: #FFFAF0;
+    /* Creamish background */
+    color: #1a1a1a;
+    padding: 2rem 0;
+    line-height: 1.25;
+    font-family: serif;
+    letter-spacing: -0.0px;
+}
+
+.container {
+    margin: 0;
+    padding: 2rem 20px 0 20px;
+    font-family: serif;
+    flex: 1;
+}
+
+.content {
+    max-width: 600px;
+    position: relative;
+    z-index: 10;
+}
+
+.content-centered {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.content-blog-post {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: serif;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 1.0rem 0;
+}
+
+p,
+ol,
+ul,
+li {
+    font-family: serif;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.italic {
+    font-style: italic;
+}
+
+/* Links */
+a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+a:hover {
+    color: #666;
+}
+
+h2 a {
+    text-decoration: none;
+}
+
+h2 a:hover {
+    color: #1a1a1a;
+}
+
+.with-space {
+    margin-top: 2rem;
+}
+
+/* Images */
+.wide-figure {
+    margin: 2rem 0;
+}
+
+.wide-figure img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+/* Layout */
+html,
+body {
+    margin: 0;
+}
+
+body {
+    font-family: 'Crimson Text', serif;
+    background-color: #FFFAF0;
+    color: #1a1a1a;
+    line-height: 1.6;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ASCII Background */
+.ascii-art {
+    font-family: monospace;
+    white-space: pre;
+    overflow: hidden;
+    line-height: 1.0;
+    width: 100%;
+    font-size: 0.8vw;
+    font-weight: bold;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    color: #1a1a1a;
+    opacity: 0.35;
+    text-align: center;
+    pointer-events: none;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 1rem 0;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    .content {
+        font-size: 0.9rem;
+    }
+
+    .ascii-art {
+        font-size: 8px;
+        width: 150%;
+    }
+}
