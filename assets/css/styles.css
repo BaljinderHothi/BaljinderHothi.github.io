@@ -136,7 +136,7 @@ body {
     position: fixed;
     top: 0;
     bottom: 0;
-    left: 80%;
+    left: 70%;
     transform: translateX(-50%);
     height: 100vh;
     display: flex;
