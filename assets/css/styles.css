@@ -9,9 +9,9 @@ html {
 }
 
 body {
-    background-color: #FDF4E3;
-    /* Creamish background slightly darker */
-    color: #1a1a1a;
+    background-color: #18181B;
+    /* Zinc/Very Dark Gray background */
+    color: #D4D4D8;
     padding: 2rem 0;
     line-height: 1.25;
     font-family: serif;
@@ -78,21 +78,24 @@ li {
 
 /* Links */
 a {
-    color: inherit;
+    color: #A3E635;
+    /* Lime Green */
     text-decoration: underline;
     text-underline-offset: 2px;
 }
 
 a:hover {
-    color: #666;
+    color: #84cc16;
+    /* Darker Lime Green on hover */
 }
 
 h2 a {
     text-decoration: none;
+    color: inherit;
 }
 
 h2 a:hover {
-    color: #1a1a1a;
+    color: #A3E635;
 }
 
 .with-space {
@@ -119,8 +122,8 @@ body {
 
 body {
     font-family: 'Crimson Text', serif;
-    background-color: #FDF4E3;
-    color: #1a1a1a;
+    background-color: #18181B;
+    color: #D4D4D8;
     line-height: 1.6;
     padding: 0;
     display: flex;
@@ -142,8 +145,8 @@ body {
     display: flex;
     justify-content: center;
     z-index: 0;
-    color: #1a1a1a;
-    opacity: 0.5;
+    color: #3F6212;
+    opacity: 0.8;
     pointer-events: none;
     margin: 0;
     padding: 0;
