@@ -136,10 +136,10 @@ body {
     position: fixed;
     top: 0;
     bottom: 0;
-    right: -10%;
+    left: 80%;
+    transform: translateX(-50%);
     height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
     z-index: 0;
     color: #1a1a1a;
@@ -151,9 +151,8 @@ body {
 
 .ascii-art span {
     display: block;
-    font-size: 1.15vh;
+    font-size: 1.20vh;
     line-height: 1.05;
-    transform-origin: center right;
 }
 
 @media (max-width: 600px) {
