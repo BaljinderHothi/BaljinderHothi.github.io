@@ -133,21 +133,27 @@ body {
     font-family: monospace;
     white-space: pre;
     overflow: hidden;
-    line-height: 1.0;
-    width: 100%;
-    font-size: 1.06vh;
-    font-weight: bold;
     position: fixed;
-    top: 50%;
-    left: 75%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    bottom: 0;
+    right: -10%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: 0;
     color: #1a1a1a;
     opacity: 0.5;
-    text-align: center;
     pointer-events: none;
     margin: 0;
     padding: 0;
+}
+
+.ascii-art span {
+    display: block;
+    font-size: 1.15vh;
+    line-height: 1.05;
+    transform-origin: center right;
 }
 
 @media (max-width: 600px) {
