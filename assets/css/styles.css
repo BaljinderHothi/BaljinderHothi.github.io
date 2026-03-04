@@ -135,7 +135,7 @@ body {
     overflow: hidden;
     line-height: 1.0;
     width: 100%;
-    font-size: 1.02vh;
+    font-size: 1.06vh;
     font-weight: bold;
     position: fixed;
     top: 50%;
@@ -146,6 +146,8 @@ body {
     opacity: 0.5;
     text-align: center;
     pointer-events: none;
+    margin: 0;
+    padding: 0;
 }
 
 @media (max-width: 600px) {
