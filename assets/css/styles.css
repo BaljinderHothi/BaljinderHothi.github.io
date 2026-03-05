@@ -9,8 +9,8 @@ html {
 }
 
 body {
-    background-color: #27272A;
-    /* Zinc 800/Slightly Lighter Dark Gray background */
+    background-color: #1C1C1F;
+    /* Very Dark Zinc, slightly lighter than #18181B */
     color: #D4D4D8;
     padding: 2rem 0;
     line-height: 1.25;
@@ -122,7 +122,7 @@ body {
 
 body {
     font-family: 'Crimson Text', serif;
-    background-color: #27272A;
+    background-color: #1C1C1F;
     color: #D4D4D8;
     line-height: 1.6;
     padding: 0;
